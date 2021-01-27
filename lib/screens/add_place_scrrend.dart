@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greatplacesapp/widget/image_input.dart';
 
 class AddPlaceScreen extends StatefulWidget {
   static const routeName = "/add-place";
@@ -27,7 +28,10 @@ class _AddPlaceScreenState extends State<AddPlaceScreen> {
                           TextField(
                             decoration: InputDecoration(labelText: 'Title'),
                             controller: _titleController,
-                          )
+                          ),
+                          SizedBox(height: 10),
+                          Container(),
+                          ImageInput(),
                         ],
                       )))),
           RaisedButton.icon(
