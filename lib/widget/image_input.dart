@@ -16,6 +16,9 @@ class _ImageInputState extends State<ImageInput> {
   void _takePicture() async {
     final picker = ImagePicker();
     final imageFile = await picker.getImage(source: ImageSource.gallery);
+    if (imageFile == null) {
+      return;
+    }
     setState(() {
       _storedImage = File(imageFile.path);
     });
